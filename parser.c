@@ -6,6 +6,7 @@
 
 
 char[] start_sentance = "$GP";
+const char start = '$';
 char[] gps_fix_data = "GGA";
 char[] lat_lon_time = "GLL";
 char[] active_sats = "GSA";
@@ -26,6 +27,8 @@ int day;
 int month;
 int year;
 int tz_offset;
+bool in_message = false;
+String sentence;
 
 
 void Parser::Parser(SerialPort _serial){
@@ -41,7 +44,18 @@ void Parser::update(){
 		buffer += *serial.read();
 	}
 	String strbuf = String(buffer);
+	int index = strbuf.indexOf(start);
 
+	if(in_message){
+		sentence += strbuf.substring(0, index);
+	}else{
+		sentence = strbuf.substring(index, strbuf.indexOf(start, index+1))
+	}
+
+	if(sentence.equals(start_sentance+gps_fix_data)){
+
+	}
+	else if(sentence.equals())
 	
 
 
