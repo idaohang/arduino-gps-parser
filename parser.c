@@ -4,35 +4,37 @@
 
 #include <Serial.h>
 
+class parser(){
+	char[] start_sentence = "$";
+	char[] gps_fix_data = "GPGGA";
+	char[] lat_lon_time = "GPGLL";
+	char[] active_sats = "GPGSA";
+	char[] sats_in_view = "GPGSV";
+	char[] true_heading = "GPHDT";
+	char[] date_time = "GPZDA";
 
-char[] start_sentence = "$";
-char[] gps_fix_data = "GPGGA";
-char[] lat_lon_time = "GPGLL";
-char[] active_sats = "GPGSA";
-char[] sats_in_view = "GPGSV";
-char[] true_heading = "GPHDT";
-char[] date_time = "GPZDA";
+	void Parser::Parser(SerialPort port){
 
-void Parser::Parser(SerialPort port){
+	}
 
-}
+	void Parser::update(){
 
-void Parser::update(){
+	}
 
-}
+	float Parser::time(){
 
-float Parser::time(){
+	}
 
-}
+	float Parser::lat(){
 
-float Parser::lat(){
+	}
 
-}
+	float Parser::lon(){
 
-float Parser::lon(){
+	}
 
-}
-
-int Parser::sats(){
+	int Parser::sats(){
 	
+	}
+
 }
