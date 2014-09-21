@@ -5,7 +5,7 @@
 #include <Serial.h>
 
 
-char[] start_sentance = "$";
+char[] start_sentence = "$";
 char[] gps_fix_data = "GPGGA";
 char[] lat_lon_time = "GPGLL";
 char[] active_sats = "GPGSA";
