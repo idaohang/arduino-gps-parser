@@ -3,25 +3,9 @@
 */
 
 #include <Serial.h>
+#include <Arduino.h>
 
-class parser(){
-	char[] start_sentence = "$";
-	char[] gps_fix_data = "GPGGA";
-	char[] lat_lon_time = "GPGLL";
-	char[] active_sats = "GPGSA";
-	char[] sats_in_view = "GPGSV";
-	char[] true_heading = "GPHDT";
-	char[] date_time = "GPZDA";
 
-<<<<<<< HEAD
-	void Parser::Parser(SerialPort port){
-
-	}
-
-	void Parser::update(){
-
-	}
-=======
 char[] start_sentance = "$GP";
 const char start = '$';
 char[] gps_fix_data = "GGA";
@@ -72,37 +56,22 @@ void Parser::update(){
 	if(sentence.equals(start_sentance+gps_fix_data)){
 
 	}
-	else if(sentence.equals())
-	
-
->>>>>>> 92c7a08f4c97721ddfed3e922571ed985fee10d7
-
-	float Parser::time(){
-
-<<<<<<< HEAD
+	else if(sentence.equals()){
+		
 	}
-=======
+}
+
 float Parser::time(){
 	/*
 	* UTC time hhmmss.ss
 	*/
->>>>>>> 92c7a08f4c97721ddfed3e922571ed985fee10d7
-
-	float Parser::lat(){
-
-	}
-
-	float Parser::lon(){
-
-	}
-
-<<<<<<< HEAD
-	int Parser::sats(){
-	
-	}
+}
+float Parser::lat(){
 
 }
-=======
+
+float Parser::lon(){
+
 }
 
 int Parser::sats(){
@@ -112,4 +81,3 @@ int Parser::sats(){
 float Parser::heading(){
 
 }
->>>>>>> 92c7a08f4c97721ddfed3e922571ed985fee10d7
